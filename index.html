@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>surgeon.qzz.io | Creative Lab</title>
+    <style>
+        /* Theme Colors based on user preferences */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #222222;
+            --text-main: #FFFFFF;
+            --text-muted: #888888;
+            --accent-red: #FF0000;
+            --accent-darkred: #8B0000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            border-right: 3px solid var(--accent-red);
+            white-space: nowrap;
+            animation: blink 0.75s step-end infinite;
+            display: inline-block;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--text-muted);
+            transition: background-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-red);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.1);
+        }
+
+        .card:hover::before {
+            background-color: var(--accent-red);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            align-self: flex-start;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            border-radius: 4px;
+            background-color: #2a2a2a;
+            color: var(--text-muted);
+            font-weight: bold;
+            border: 1px solid #444;
+        }
+
+        .card:hover .status-badge {
+            background-color: var(--accent-darkred);
+            color: var(--text-main);
+            border-color: var(--accent-red);
+        }
+
+        footer {
+            margin-top: 4rem;
+            color: #444;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: var(--accent-red); }
+        }
+
+        @media (max-width: 600px) {
+            .logo { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SURGEON.QZZ.IO //</div>
+        <p class="subtitle">An experimental multi-app canvas pushing the boundaries of digital creativity. Interactive tools, social experiments, and collective archives living under one hub.</p>
+    </header>
+
+    <main class="grid">
+        <!-- Project 1 -->
+        <div class="card">
+            <div>
+                <h2 class="card-title">01 // Cyber-Surgeon</h2>
+                <p class="card-desc">An interactive tech-dismantler. Drop in code scripts, complex layout files, or web assets to surgically break them down into raw animated streams and custom visual data art.</p>
+            </div>
+            <span class="status-badge">Phase: Incubation</span>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card">
+            <div>
+                <h2 class="card-title">02 // Infinite Canvas</h2>
+                <p class="card-desc">A live social grid experiment. Every explorer who stops by can modify precisely one element every cycle. Watch a global, unpredictable community canvas evolve in real time.</p>
+            </div>
+            <span class="status-badge">Phase: Calibration</span>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card">
+            <div>
+                <h2 class="card-title">03 // Time Capsule</h2>
+                <p class="card-desc">A planetary emotional monument. A living 3D grid collage where citizens from across coordinates upload sensory snippets, encapsulating a shared moment across space and time.</p>
+            </div>
+            <span class="status-badge">Phase: Assembly</span>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Creative Tech Laboratory. All rights reserved.
+    </footer>
+
+</body>
+</html>
